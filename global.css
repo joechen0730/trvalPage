@@ -1,0 +1,38 @@
+        /*Default setting*/
+        
+        * {
+            font-family: "Montserrat", "Noto Sans TC";
+            box-sizing: border-box;
+        }
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        img {
+            /*            max-width: 100%;*/
+            width: 100%;
+            vertical-align: top;
+        }
+        
+        p {
+            color: #575757;
+            line-height: 2;
+        }
