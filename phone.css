@@ -119,6 +119,9 @@
         padding-bottom: 150px;
         text-align: center;
     }
+    #works h2{
+        font-size: 18px;
+    }
     #works p {
         margin-top: 15px;
     }
@@ -175,7 +178,9 @@
 				}
 
 				#customers h3 {
-					color: gray; 	
+					color: gray;
+                    padding-left: 2px;
+                    padding-right: 2px;
 				}
 
 				#customers p {
