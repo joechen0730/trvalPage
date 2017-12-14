@@ -132,8 +132,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
-/*                    height: 300px;*/
-        background-attachment: fixed;
+                   height: 300px;
+/*         background-attachment: fixed; */
         padding-top: 150px;
         padding-bottom: 150px;
     }
