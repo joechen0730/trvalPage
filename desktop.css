@@ -1,9 +1,19 @@
 @media screen and (min-width:1200px) {
     /**********************************************************/
     
-    #home{
-        position: fixed;
+    .fixdtop{
+        position: relative;
         z-index: 100;
+        
+    }
+    @keyframes ft {
+        from {top: -50px;}
+        to {top: 0;}
+    }
+    .fixdtop-s {
+        position: fixed;
+        top: 0;
+        animation: ft .3s;
     }
     h1,h2{
         color: #16335F;
@@ -55,7 +65,7 @@
     nav .logo {
         text-shadow: 1px 1px 5px #424242;
         color: #0D1130;
-        font-size: 35px;
+        font-size: 40px;
         float: left;
         letter-spacing: 3px;
         font-weight: 700;
@@ -76,7 +86,7 @@
         color: #000;
         padding-left: 30px;
         padding-right: 30px;
-        font-size: 16px;
+        font-size: 23px;
         line-height: 70px;
         font-weight: 900;
         transition: all 0.5s;

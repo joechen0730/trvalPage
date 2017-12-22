@@ -3,6 +3,20 @@
     .slick-prev:before, .slick-next:before{
         display: none;
     }
+    .fixdtop{
+        position: relative;
+        z-index: 100;
+        
+    }
+    @keyframes ft {
+        from {top: -50px;}
+        to {top: 0;}
+    }
+    .fixdtop-s {
+        position: fixed;
+        top: 0;
+        animation: ft .3s;
+    }
 /*
     #home{
         position: fixed;
@@ -119,9 +133,6 @@
         padding-bottom: 150px;
         text-align: center;
     }
-    #works h2{
-        font-size: 18px;
-    }
     #works p {
         margin-top: 15px;
     }
@@ -132,8 +143,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
-                   height: 300px;
-/*         background-attachment: fixed; */
+/*                    height: 300px;*/
+        background-attachment: fixed;
         padding-top: 150px;
         padding-bottom: 150px;
     }
@@ -178,9 +189,7 @@
 				}
 
 				#customers h3 {
-					color: gray;
-                    padding-left: 2px;
-                    padding-right: 2px;
+					color: gray; 	
 				}
 
 				#customers p {

@@ -23,11 +23,18 @@
       <script>
               new WOW().init();
     </script>
-     
+     <style>
+         #navbar ul li .active{
+             color: orange;
+             border-bottom: 2px solid orange;
+         }
+       
+
+    </style>
 </head>
 
 <body id="toparea">
-    <nav class="container" id="home">
+    <nav class="container top fixdtop" id="home">
         <div class="wrapper clearfix">
             <div class="logo">Trval
             
@@ -36,14 +43,14 @@
                 </div>
           
             </div>
-            <div class="menu">
+            <div class="menu" id="navbar">
                 <ul>
-                    <li><a href="#" data-name="toparea">來一場驚喜旅遊</a></li>
-                    <li><a href="#" data-name="works">旅途</a></li>
-                    <li><a href="#" data-name="service">服務</a></li>
-                    <li><a href="#" data-name="about">關於我們</a></li>
-                    <li><a href="#" data-name="news">最新消息</a></li>
-                    <li><a href="#" data-name="contact">聯繫我們</a></li>
+                    <li><a href="#home" data-name="toparea">來一場驚喜旅遊</a></li>
+                    <li><a href="#works" data-name="works">旅途</a></li>
+                    <li><a href="#service" data-name="service">服務</a></li>
+                    <li><a href="#about" data-name="about">關於我們</a></li>
+                    <li><a href="#news" data-name="news">最新消息</a></li>
+                    <li><a href="#contact" data-name="contact">聯繫我們</a></li>
                 </ul>
             </div>
         </div>
@@ -352,6 +359,40 @@
                 ]
             });
         })
+        // 顯示nav與當前內容位置
+         $(window).scroll(function () {
+        var scrollPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+           
+        // Navbar位置對應顯示
+        $('#navbar ul li a').each(function (){
+            var targetA = $(this).attr('href');
+          
+            var targetPos = $(targetA).offset().top;
+            var targetHeight = $(targetA).outerHeight();
+            if (scrollPos > targetPos -120 ){
+                $('#navbar ul li a').removeClass('active');
+                $(this).addClass("active")};
+            })
+
+             // navbar  到一個段落出現
+        })
+        
+         $(window).scroll(function(){
+        var q1 = $(window).scrollTop();
+        console.log(q1);
+        function ft(){
+            
+        }
+        if(q1>400){
+            $("#home").addClass("fixdtop-s");
+            
+        }else{
+             $("#home").removeClass("fixdtop-s");
+        }
+    })
+//        })  
+        
     </script>
 </body>
 
